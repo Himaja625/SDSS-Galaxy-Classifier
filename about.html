@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About • SDSS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script src="{{ url_for('static', filename='js/galaxy.js') }}"></script>
+</head>
+
+<body class="galaxy-page shooting-stars">
+
+<nav class="navbar">
+  <div class="logo">SDSS Galaxy Classifier</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/how">How It Works</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <a href="/classify" class="get-started-btn">Get Started</a>
+</nav>
+
+<section class="content-center">
+  <h1>About This Project</h1>
+
+  <div class="glass-card">
+    <h2>SDSS Dataset</h2>
+    <p>The Sloan Digital Sky Survey provides high-quality photometric galaxy data.</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>Why Classification?</h2>
+    <p>Machine learning helps understand galaxy evolution and star formation.</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>Our Approach</h2>
+    <p>Multiple ML models were trained and the best one deployed.</p>
+  </div>
+</section>
+
+<footer class="footer">© 2025 SDSS Galaxy Classifier</footer>
+</body>
+</html>

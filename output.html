@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result • SDSS</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script defer src="{{ url_for('static', filename='js/galaxy.js') }}"></script>
+</head>
+
+<body class="galaxy-page">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">SDSS Galaxy Classifier</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/how">How It Works</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<section class="content-center">
+  <h1>Prediction Result</h1>
+
+  <div class="glass-card big">
+    {{ prediction }}
+  </div>
+
+  <a href="/classify" class="hero-btn">Classify Another Galaxy</a>
+</section>
+
+<footer class="footer">
+  © 2025 SDSS Galaxy Classifier
+</footer>
+
+</body>
+</html>

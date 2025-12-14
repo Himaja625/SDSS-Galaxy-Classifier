@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How It Works • SDSS</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script src="{{ url_for('static', filename='js/galaxy.js') }}"></script>
+</head>
+
+<body class="galaxy-page shooting-stars">
+
+<nav class="navbar">
+  <div class="logo">SDSS Galaxy Classifier</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/how">How It Works</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<section class="content-center">
+  <h1>How the Model Works</h1>
+
+  <div class="glass-card">
+    <p>
+      This project uses supervised machine learning models trained on the
+      Sloan Digital Sky Survey (SDSS) dataset. Photometric features such as
+      u, g, r, i and z band magnitudes are used to identify galaxy types.
+    </p>
+  </div>
+
+  <div class="glass-card">
+    <p>
+      The dataset is cleaned, normalized and balanced using SMOTE to prevent
+      bias toward dominant classes. Multiple models are evaluated and the
+      most accurate one is deployed.
+    </p>
+  </div>
+
+  <div class="glass-card">
+    <p>
+      Once deployed, users can input galaxy parameters and receive real-time
+      predictions through the trained model.
+    </p>
+  </div>
+</section>
+
+<footer class="footer">© 2025 SDSS Galaxy Classifier</footer>
+</body>
+</html>

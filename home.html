@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SDSS Galaxy Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script defer src="{{ url_for('static', filename='js/universe.js') }}"></script>
+</head>
+
+<body class="home-page">
+<canvas id="universe"></canvas>
+
+<nav class="navbar">
+    <div class="logo">SDSS Galaxy Classifier</div>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/how">How It Works</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <a href="/classify" class="get-started-btn">Get Started</a>
+  </nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Explore the Universe of Galaxies</h1>
+    <p>Classify galaxies using Machine Learning powered by SDSS data.</p>
+    <a href="/classify" class="hero-btn">Start Classifying</a>
+  </div>
+</section>
+
+<footer class="footer">© 2025 SDSS Galaxy Classifier</footer>
+</body>
+
+</html>

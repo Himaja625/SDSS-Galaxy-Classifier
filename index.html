@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Classify Galaxy • SDSS</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <!-- Galaxy background -->
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script defer src="{{ url_for('static', filename='js/galaxy.js') }}"></script>
+</head>
+
+<body class="galaxy-page">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">SDSS Galaxy Classifier</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/how">How It Works</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<section class="content-center">
+  <h1>Classify a Galaxy</h1>
+
+  <form class="glass-form" action="/predict" method="POST">
+
+    <!-- Magnitudes -->
+    <input type="number" step="any" name="i" placeholder="i-band Magnitude" required>
+    <input type="number" step="any" name="z" placeholder="z-band Magnitude" required>
+
+    <!-- Flux -->
+    <input type="number" step="any" name="modelFlux_z" placeholder="modelFlux_z" required>
+
+    <!-- Petrosian Radius -->
+    <input type="number" step="any" name="petroRad_g" placeholder="petroRad_g" required>
+    <input type="number" step="any" name="petroRad_r" placeholder="petroRad_r" required>
+
+    <!-- Petrosian Flux -->
+    <input type="number" step="any" name="petroFlux_z" placeholder="petroFlux_z" required>
+
+    <!-- Petrosian R50 -->
+    <input type="number" step="any" name="petroR50_u" placeholder="petroR50_u" required>
+    <input type="number" step="any" name="petroR50_g" placeholder="petroR50_g" required>
+    <input type="number" step="any" name="petroR50_i" placeholder="petroR50_i" required>
+    <input type="number" step="any" name="petroR50_r" placeholder="petroR50_r" required>
+
+    <button class="hero-btn" type="submit">Predict</button>
+  </form>
+</section>
+
+<footer class="footer">
+  © 2025 SDSS Galaxy Classifier
+</footer>
+
+</body>
+</html>
